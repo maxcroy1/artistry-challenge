@@ -1,0 +1,12 @@
+<h1>Instrument Checkout Form</h1>
+<%= form_for @ai do |f| %>
+
+    <%= f.label :artist_id, value="Artist:" %>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name %><br><br>
+
+    <%= f.label :instrument_id, value="Instrument:" %>
+    <%= f.collection_select :instrument_id, Instrument.all, :id, :name %><br><br>
+
+    <%= f.submit %>
+
+<% end %>
